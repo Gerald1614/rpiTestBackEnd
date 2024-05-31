@@ -96,7 +96,7 @@ public class RpiController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "{\"status\": \"stop green light\"}";
+		return "{\"status\": \"green light stopped\"}";
 	}
 	@CrossOrigin
 	@GetMapping("/green/start")
@@ -108,7 +108,7 @@ public class RpiController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "{\"status\": \"start green light\"}";
+		return "{\"status\": \"green light started\"}";
 	}
 	
 	@CrossOrigin
@@ -121,7 +121,7 @@ public class RpiController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return"---------Start blue light------------";
+		return "{\"status\": \"blue light started\"}";
 	}
 	
 	@CrossOrigin
@@ -134,7 +134,7 @@ public class RpiController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return"---------stop blue light------------";
+		return "{\"status\": \"blue light stopped\"}";
 	}
 	@CrossOrigin
 	@GetMapping("/red/start")
@@ -146,7 +146,7 @@ public class RpiController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return"---------Start red light------------";
+		return "{\"status\": \"red light started\"}";
 	}
 	
 	@CrossOrigin
@@ -159,13 +159,13 @@ public class RpiController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return"---------stop red light------------";
+		return "{\"status\": \"red light stopped\"}";
 	}
 	
 	@CrossOrigin
 	@GetMapping("/chenille/{duration}")
 	public String chenille( @PathVariable("duration") int duration) {
 		chenillard.chenillard(duration);
-		return"---------chenillard fini------------";
+		return "{\"status\": \"chenillard stopped\"}";
 	}
 }
