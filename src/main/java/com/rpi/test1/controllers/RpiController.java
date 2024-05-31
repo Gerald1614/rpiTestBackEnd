@@ -96,7 +96,7 @@ public class RpiController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return"---------stop green light------------";
+		return "{\"status\": \"stop green light\"}";
 	}
 	@CrossOrigin
 	@GetMapping("/green/start")
@@ -108,7 +108,7 @@ public class RpiController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return"---------Start green light------------";
+		return "{\"status\": \"start green light\"}";
 	}
 	
 	@CrossOrigin
